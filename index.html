@@ -1,25 +1,43 @@
-<html>
-  <head>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fada em AR</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
 
-  <body style="margin: 0; overflow: hidden">
-    <a-scene
-      vr-mode-ui="enabled: false"
-      embedded
-      renderer="logarithmicDepthBuffer: true"
-      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-    >
+    a.ar-button {
+      display: inline-block;
+      padding: 20px 40px;
+      background: #4CAF50;
+      color: white;
+      font-size: 1.5em;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
 
-      <a-entity
-        gltf-model="url(fada/scene.gltf)"
-        animation-mixer
-        position="0 -1 -3"
-        rotation="0 180 0"
-        scale="1 1 1"
-      ></a-entity>
+    a.ar-button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
 
-    </a-scene>
-  </body>
+  <!-- Link para abrir AR Quick Look -->
+  <a href="sauron.usdz" rel="ar" class="ar-button">
+    I see you
+  </a>
+
+</body>
 </html>
